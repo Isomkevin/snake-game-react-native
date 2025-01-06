@@ -1,0 +1,126 @@
+// globalStyles.js
+import { StyleSheet } from 'react-native';
+import { GAME_CONFIG } from './constants';
+
+const { GRID_SIZE, CELL_SIZE } = GAME_CONFIG; 
+
+export const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#f0f0f0',
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 20,
+  },
+  gameArea: {
+    width: GRID_SIZE * CELL_SIZE,
+    height: GRID_SIZE * CELL_SIZE,
+    backgroundColor: '#000',
+    borderWidth: 2,
+    borderColor: '#333',
+    position: 'relative',
+  },
+  snakeSegment: {
+    width: CELL_SIZE - 1,
+    height: CELL_SIZE - 1,
+    position: 'absolute',
+    borderRadius: 2,
+  },
+  food: {
+    width: CELL_SIZE - 1,
+    height: CELL_SIZE - 1,
+    backgroundColor: 'red',
+    position: 'absolute',
+    borderRadius: CELL_SIZE / 2,
+  },
+  scoreText: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    marginBottom: 5,
+  },
+  highScoreText: {
+    fontSize: 18,
+    marginBottom: 20,
+  },
+  startButton: {
+    backgroundColor: '#4CAF50',
+    padding: 15,
+    borderRadius: 8,
+    marginTop: 20,
+  },
+  startButtonText: {
+    color: 'white',
+    fontSize: 18,
+    fontWeight: 'bold',
+  },
+  controls: {
+    marginTop: 20,
+    alignItems: 'center',
+    width: 180,
+  },
+  middleControls: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    width: '100%',
+    marginVertical: 10,
+  },
+  controlButton: {
+    width: 60,
+    height: 60,
+    backgroundColor: '#ddd',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 30,
+  },
+  centerSpace: {
+    width: 60,
+  },
+  upArrow: {
+    width: 0,
+    height: 0,
+    backgroundColor: 'transparent',
+    borderStyle: 'solid',
+    borderLeftWidth: 10,
+    borderRightWidth: 10,
+    borderBottomWidth: 20,
+    borderLeftColor: 'transparent',
+    borderRightColor: 'transparent',
+    borderBottomColor: '#333',
+  },
+  downArrow: {
+    width: 0,
+    height: 0,
+    backgroundColor: 'transparent',
+    borderStyle: 'solid',
+    borderLeftWidth: 10,
+    borderRightWidth: 10,
+    borderTopWidth: 20,
+    borderLeftColor: 'transparent',
+    borderRightColor: 'transparent',
+    borderTopColor: '#333',
+  },
+  leftArrow: {
+    width: 0,
+    height: 0,
+    backgroundColor: 'transparent',
+    borderStyle: 'solid',
+    borderTopWidth: 10,
+    borderBottomWidth: 10,
+    borderRightWidth: 20,
+    borderTopColor: 'transparent',
+    borderBottomColor: 'transparent',
+    borderRightColor: '#333',
+  },
+  rightArrow: {
+    width: 0,
+    height: 0,
+    backgroundColor: 'transparent',
+    borderStyle: 'solid',
+    borderTopWidth: 10,
+    borderBottomWidth: 10,
+    borderLeftWidth: 20,
+    borderTopColor: 'transparent',
+    borderBottomColor: 'transparent',
+    borderLeftColor: '#333',
+  },
+});
